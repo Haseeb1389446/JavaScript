@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: antiquewhite;
+            font-family: arial;
+        }
+
+        th,td{
+            padding: 15px;
+            border: 2px solid rgba(0, 0, 0, 0.753);
+        }
+
+        table{
+            border: 2px solid rgba(0, 0, 0, 0.774);
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+        <tr>
+            <th>No.</th>
+            <th>EMPLOYE ID</th>
+            <th>NAME</th>
+            <th>AGE</th>
+            <th>GENDER</th>
+            <th>REGION</th>
+            <th>DESIG</th>
+            <th>SALARY</th>
+        </tr>
+        </thead>
+        <tbody id="data">
+            
+        </tbody>
+    </table>
+
+    <script>
+        var std1 = {no:1, ID:"FF01", name:"haseeb", age:14, gender:"male", region:"islam", desig:"software injeneer", salary:"5 lakh"}
+        var std2 = {no:2, ID:"FF02", name:"tayyaba", age:15, gender:"female", region:"islam", desig:"graphic designer", salary:"90 thousand"}
+        var std3 = {no:3, ID:"FF03", name:"asma", age:18, gender:"female", region:"islam", desig:"accountant", salary:"2 lakh"}
+        var std4 = {no:4, ID:"FF04", name:"hanan", age:11, gender:"male", region:"islam", desig:"imam-e-kaba", salary:"6 lakh"}
+        var std5 = {no:5, ID:"FF05", name:"raheem", age:45, gender:"male", region:"islam", desig:"injeneer", salary:"2.5 lakh"}
+        var std6 = {no:6, ID:"FF06", name:"hajra", age:37, gender:"female", region:"islam", desig:"cook", salary:"80 thousand"}
+        var std7 = {no:7, ID:"FF07", name:"sultan", age:85, gender:"male", region:"islam", desig:"army officer", salary:"3 lakh"}
+        var std8 = {no:8, ID:"FF08", name:"rehman", age:17, gender:"male", region:"islam", desig:"police inspector", salary:"1 lakh"}
+        var std9 = {no:9, ID:"FF09", name:"noman", age:23, gender:"male", region:"islam", desig:"hecker", salary:"4 lakh"}
+        var std10 = {no:10, ID:"FF10", name:"sadaf", age:25, gender:"female", region:"islam", desig:"air hostris", salary:"1.5 lakh"}
+        var std11 = {no:11, ID:"FF11", name:"laiba", age:16, gender:"female", region:"islam", desig:"aalima", salary:"70 thousand"}
+        var std12 = {no:12, ID:"FF12", name:"sawera", age:12, gender:"female", region:"islam", desig:"aalima", salary:"70 thousand"}
+        var std13 = {no:13, ID:"FF13", name:"areeba", age:10, gender:"female", region:"islam", desig:"aalima", salary:"70 thousand"}
+        var std14 = {no:14, ID:"FF14", name:"mubien", age:9, gender:"male", region:"islam", desig:"spy", salary:"3 lakh"}
+        var std15 = {no:15, ID:"FF15", name:"yonus", age:50, gender:"male", region:"islam", desig:"buisness man", salary:"2.3 lakh"}
+        var std16 = {no:16, ID:"FF16", name:"aziza", age:48, gender:"female", region:"islam", desig:"tailor", salary:"80 thousand"}
+
+        var students = [std1,std2,std3,std4,std5,std6,std7,std8,std9,std10,std11,std12,std13,std14,std15,std16]
+
+        students.forEach(function(item){document.getElementById("data").innerHTML += `
+        <tr>
+            <td>${item.no}</td>
+            <td>${item.ID}</td>
+            <td>${item.name}</td>
+            <td>${item.age}</td>
+            <td>${item.gender}</td>
+            <td>${item.region}</td>
+            <td>${item.desig}</td>
+            <td>${item.salary}</td>
+        </tr>`
+        })
+    </script>
+</body>
+</html>

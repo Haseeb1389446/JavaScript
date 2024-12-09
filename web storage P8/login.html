@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            height: 100vh;
+            width: 100%;
+            font-family: arial;
+        }
+
+        .h{
+            color: white;
+            background-color: aquamarine;
+            padding: 20px;
+            text-shadow: 2px 3px 2px rgba(15, 15, 15, 0.863);
+            box-shadow: 2px 2px 2px rgba(128, 128, 128, 0.842);
+            text-align: center;
+        }
+
+        form{
+            height: 700px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .input-box{
+            margin: 30px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        input{
+            width: 800px;
+            padding: 2px;
+            border: 2px solid rgba(48, 46, 46, 0.795);
+            border-radius: 3px;
+            margin-top: 5px;
+            margin-left: -2px;
+        }
+
+        input:focus{
+            box-shadow: 5px 4px 2px rgba(69, 69, 70, 0.295);
+        }
+
+        span{
+            margin-top: 1px;
+            font-size: 13px;
+        }
+
+        #btn{
+            padding: 5px;
+            background-color: aquamarine;
+            color: black;
+            margin-left: 30px;
+            border-radius: 5px;
+        }
+
+        #btn:hover{
+            background-color: rgb(151, 230, 203);
+            cursor: pointer;
+            transition: .5s;
+        }
+    </style>
+</head>
+<body>
+    <div class="h">
+        <h1>WEB STORAGE</h1>
+    </div>
+        <form>
+            <div class="form-group">
+                <div class="input-box">
+                    <label for="email">Email ID : </label> <input id="email" name="email" type="email" placeholder="Enter your Email">
+                    <span id="emailerror"></span>
+                </div>
+                <div class="input-box">
+                    <label for="password">Password : </label> <input id="pass" name="password" type="password" placeholder="Enter your password" >
+                    <span id="passerror"></span>
+                </div>
+                </div>
+                <button id="btn" onclick="vallidation()">SUBMIT</button>
+            </div>
+            </form>
+
+
+
+            <script>
+                function vallidation(){
+
+                    var email = document.getElementById("email").value ;
+                    var pass = document.getElementById("pass").value ;
+
+                    var emailcheck = /^[a-zA-Z0-9]{6,}@[a-zA-Z]{2,}.[a-zA-Z]{2,}$/;
+                    var passcheck = /^[a-zA-Z0-9]{8,}$/;
+
+                    
+                    if(email.match(emailcheck)){
+                        document.getElementById("emailerror").innerText = "**yes your right!";
+                        document.getElementById("emailerror").style.color = "green";
+                    }else{
+                        document.getElementById("emailerror").innerText = "**no! someting else";
+                        document.getElementById("emailerror").style.color = "red";
+                    }
+                    
+                    
+                    if(pass.match(passcheck)){
+                        document.getElementById("passerror").innerText = "**yes your right!";
+                        document.getElementById("passerror").style.color = "green";
+                    }else{
+                        document.getElementById("passerror").innerText = "**no! someting else";
+                        document.getElementById("passerror").style.color = "red";
+                    }
+
+
+
+                     // WEB STORAGE
+                    
+                    var getemail = localStorage.getItem("Email")
+                    var getpass = localStorage.getItem("Pass")
+
+
+                    var email = document.getElementById("email").value ;
+                    var pass = document.getElementById("pass").value ;
+
+
+
+                    if(email == getemail && pass == getpass){
+                        alert("login successfully")
+                    }else{
+                        alert("invalid credentials")
+                    }
+                    
+                }
+            </script>
+</body>
+</html>

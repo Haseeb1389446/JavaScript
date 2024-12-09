@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>longitude . latitude</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: antiquewhite;
+        }
+
+        a{
+            padding: 20px;
+            border-radius: 7px;
+            background-color: burlywood;
+            text-transform: uppercase;
+            
+        }
+    </style>
+</head>
+<body>
+    <a id="location" onclick="getposition()" target="_blank">curent location</a>
+
+
+    <script>
+
+        function getposition(){
+            if(navigator.geolocation){
+                navigator.geolocation.getCurrentPosition(position);
+            }else{
+                alert("geolocation does not supported");
+            }
+        }
+
+        function position(p){
+
+            var longitude = p.coords.longitude;
+            var latitude = p.coords.latitude;
+
+            document.getElementById("location").href = "https://www.google.com/maps/@24.9397248,67.09248,12z?hl=en&entry=ttu?q=" + p.coords.longitude + "," + p.coords.latitude;
+
+            // alert("longitude :"+ p.coords.longitude+ '\n'+ "latitude:"+ p.coords.latitude);
+        }
+
+    </script>
+</body>
+</html>

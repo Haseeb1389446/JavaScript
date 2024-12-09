@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>detail page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: arial;
+        }
+
+        body {
+            height: 100vh;
+            width: 100%;
+        }
+
+        .container {
+            display: flex;
+        }
+
+        .left {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            width: 35%;
+            background-color: bisque;
+            border-right: 2px solid #000000d5;
+        }
+
+        .image {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 20px;
+        }
+
+        .img-h {
+            margin-left: 70px;
+            margin-top: 5px;
+            font-size: 30px;
+        }
+
+        img {
+            width: 80%;
+            border-radius: 10px;
+        }
+
+        .content1 {
+            margin-left: 70px;
+        }
+
+        b {
+            text-transform: uppercase;
+        }
+
+        .s {
+            padding: 5px 9px;
+            border: 1px solid gray;
+            border-radius: 3px;
+        }
+
+        .s:hover {
+            border: 1.5px solid rgb(0, 0, 0);
+            cursor: pointer;
+            transition: .5s;
+        }
+
+
+
+        button {
+            width: 500px;
+            padding: 4px;
+            background-color: rgb(221, 171, 109);
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: rgb(199, 144, 78);
+        }
+
+        button:active {
+            background-color: rgb(173, 138, 95);
+        }
+
+        .rating img {
+            width: 90px;
+            margin-left: 10px;
+        }
+
+        .right {
+            height: 100vh;
+            width: 65%;
+            padding: 20px;
+            background-color: bisque;
+        }
+
+        .desc {
+            width: 95%;
+            text-align: justify;
+        }
+
+        .column {
+            display: flex;
+            text-align: center;
+            margin-top: 120px;
+        }
+
+        .rl {
+            width: 45%;
+            border: 1px solid gray;
+            border-right: none;
+            padding: 10px;
+        }
+
+        .rr {
+            width: 45%;
+            border: 1px solid gray;
+            padding: 10px;
+        }
+
+        .other{
+            margin-top: 120px;
+
+        }
+
+        footer{
+            height: 27px;
+            width: 100%;
+            border-top: 2px solid gray;
+            color: rgb(112, 107, 107);
+            text-align: center;
+            line-height: 2;
+            margin-top: 205px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container" id="detailpage">
+        <div class="left">
+            <div class="image">
+                <img src="img/c2.jpg" alt="" id="mainimg">
+            </div>
+            <h1 class="img-h" id="img-h">GOKU</h1>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div class="content1">
+                <div class="object">
+                    <span><b>Object :</b> <span>WALLPAPER</span>
+                </div>
+                <br>
+                <br>
+                <br>
+                <div class="rating">
+                    <span><b>Rating :</b></span> <img src="img/s1.png" alt="" id="simg">
+                </div>
+                <br>
+                <br>
+                <br>
+                <div class="price">
+                    <span><b>Price :</b></span> <span id="price">$999.99</span>
+                </div>
+                <br>
+                <br>
+                <br>
+                <div class="sizes">
+                    <span><b>sizes :</b></span>&nbsp;&nbsp; &nbsp;<span class="s">M</span>&nbsp;&nbsp;&nbsp; <span
+                        class="s">XXL</span>&nbsp;&nbsp;&nbsp; <span class="s">S</span>&nbsp;&nbsp;&nbsp; <span
+                        class="s">L</span class="s">&nbsp;&nbsp;&nbsp; <span class="s">XL</span>
+                </div>
+
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <div class="buttons">
+                    <button>BY NOW</button>
+                    <br>
+                    <br>
+                    <button>ADD TO CARD</button>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+
+            <div class="desc">
+                <h1>Description:</h1>
+                <br>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio eaque mollitia aperiam earum,
+                    praesentium ullam? Inventore eum illum aliquam. Sequi iure tempore odit eligendi est, dignissimos
+                    autem quae earum expedita quo nulla eius nemo magni enim veritatis nesciunt reprehenderit ipsam ipsa
+                    odio similique doloribus officia ullam natus doloremque? Perspiciatis, sapiente beatae neque eius
+                    consequatur ipsam quam recusandae cupiditate labore? Deserunt ab vitae illo labore fuga. Explicabo,
+                    fugiat architecto voluptatibus consequuntur optio fuga totam eveniet obcaecati perferendis iste eum
+                    non iure exercitationem id ipsa dignissimos quae quisquam esse veritatis debitis repellendus amet
+                    temporibus voluptates quis. A odio debitis nam obcaecati est! Lorem ipsum dolor sit amet
+                    consectetur, adipisicing elit. Praesentium aut nostrum nesciunt numquam possimus, debitis magnam
+                    odit maiores ut ex magni in molestiae mollitia, illum dicta voluptatibus recusandae, unde itaque
+                    eveniet hic id veritatis minima. Delectus officia aliquam, doloribus dolores soluta reprehenderit
+                    natus in quasi deserunt fuga vero numquam modi.</p>
+            </div>
+            
+            <div class="column">
+                <div class="rl">
+                    <h2>simple</h2>
+                    <br>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio eaque mollitia aperiam earum,
+                        praesentium ullam? Inventore eum illum aliquam. Sequi iure tempore odit eligendi est,
+                        dignissimos
+                        autem quae earum expedit.</p>
+                </div>
+                <div class="rr">
+                    <h2>shining</h2>
+                    <br>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio eaque mollitia aperiam earum,
+                        praesentium ullam? Inventore eum illum aliquam. Sequi iure tempore odit eligendi est.</p>
+                </div>
+            </div>
+            
+            <div class="other">
+                <h2>Other</h2>
+                <br>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio eaque mollitia aperiam earum,
+                    praesentium ullam? Inventore eum illum aliquam. Sequi iure tempore odit eligendi Lorem ipsum dolor
+                    sit amet consectetur adipisicing elit. Reiciendis adipisci, rem omnis sunt atque corporis saepe
+                    repellendus optio doloribus. Sit, maxime? Fugiat accusantium magnam mollitia nostrum, hic expedita
+                    odit excepturi!
+                </p>
+            </div>
+
+
+            <footer>Copyright &copy; detail page.html | All right reserved!</footer>
+        </div>
+
+
+        <!-- script -->
+
+    <script src="script.js"></script>
+    <script>
+        var url = new URL(window.location.href);
+        var id = url.searchParams.get("id");
+        document.getElementById("mainimg").src = cards[id].img;
+        document.getElementById("img-h").innerText = cards[id].title;
+        document.getElementById("simg").src = cards[id].rate;
+        document.getElementById("price").innerText = cards[id].price;
+    </script>
+
+</body>
+
+</html>

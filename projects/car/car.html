@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>car</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-image: url("img/car1.jpg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .container {
+      height: 100vh;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      backdrop-filter: blur(10px);
+    }
+
+    #img {
+      height: 350px;
+      margin-bottom: 30px;
+      border: 5px solid black;
+    }
+
+    #btn {
+      margin-top: 30px;
+      padding: 3px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      background-color: #99a0b1;
+      border: 2px solid black;
+    }
+
+    #btn:hover {
+      background-color: #d0d7e7c0;
+      transition: 0.5s;
+    }
+
+    #btn:active {
+      background-color: #99a0b1;
+    }
+
+    #input {
+      padding: 3px;
+      outline: none;
+      background-color: rgba(255, 255, 255, 0.26);
+      border: 2px solid black;
+      border-radius: 5px;
+      color: black;
+    }
+
+    label {
+      font-size: 18px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <img src="img/car.jpg" alt="stay" id="img" />
+    <div class="inp-p">
+      <label for="name">CAR : </label><input type="text" value="COOL CAR" name="name" id="input" readonly />
+    </div>
+    <input type="button" value="CHANG" id="btn" onclick="chang()">
+  </div>
+
+
+
+
+  <script>
+    function chang() {
+
+      var imgtext = document.getElementById("img").alt;
+
+      if (imgtext == "stay") {
+        document.getElementById("img").src = "img/car1.jpg";
+        document.getElementById("img").alt = "flying";
+        document.getElementById("input").value = "FLYING CAR";
+      } else {
+        document.getElementById("img").src = "img/car.jpg";
+        document.getElementById("img").alt = "stay";
+        document.getElementById("input").value = "COOL CAR";
+      }
+    }
+  </script>
+</body>
+
+</html>

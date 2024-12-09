@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>longitude . latitude</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: antiquewhite;
+        }
+
+        button{
+            padding: 20px;
+            border-radius: 7px;
+            background-color: burlywood;
+            text-transform: uppercase;
+            
+        }
+    </style>
+</head>
+<body>
+    <button onclick="getposition()">curent location</button>
+
+
+    <script>
+
+        function getposition(){
+            if(navigator.geolocation){
+                navigator.geolocation.getCurrentPosition(position);
+            }else{
+                alert("geolocation does not supported");
+            }
+        }
+
+        function position(p){
+            alert("longitude :"+ p.coords.longitude+ '\n'+ "latitude:"+ p.coords.latitude);
+        }
+
+    </script>
+</body>
+</html>
